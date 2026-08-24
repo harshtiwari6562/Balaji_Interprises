@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /menu.html
+Disallow: /admin.html
+Disallow: /checkout.html
+
+Sitemap: https://balaji-enterprises-restaurant.web.app/sitemap.xml

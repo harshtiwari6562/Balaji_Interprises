@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Balaji Enterprises & Restaurant | Amul Parlour Deoria | Online Food Order</title>
+  <meta name="description" content="Order fresh Indian food, Thalis, Paneer Butter Masala, and authentic Amul Ice Creams online from Balaji Enterprises & Restaurant, Gorakhpur Rd, Deoria. Fast delivery & UPI QR payment." />
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Balaji Enterprises & Restaurant | Amul Parlour Deoria" />
+  <meta property="og:description" content="Delicious North Indian Thalis, Paneer Specials & Amul Ice Creams delivered fast in Deoria. Order Online Now!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://balaji-enterprises-restaurant.web.app/" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1200&q=80" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Balaji Enterprises & Restaurant Deoria" />
+  <meta name="twitter:description" content="Fresh food & Amul Ice Cream delivery in Deoria, UP. Pay via UPI & WhatsApp confirmation." />
+  
+  <!-- Fonts & Styles -->
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/components.css" />
+
+  <!-- Schema.org JSON-LD Structured Data for Local Restaurant -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Balaji Enterprises & Restaurant",
+    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1200&q=80",
+    "telephone": "+91-9450867890",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Gorakhpur Rd, Kailashpuri",
+      "addressLocality": "Deoria",
+      "addressRegion": "Uttar Pradesh",
+      "postalCode": "274001",
+      "addressCountry": "IN"
+    },
+    "servesCuisine": "North Indian, Pure Vegetarian, Ice Creams, Fast Food",
+    "priceRange": "₹₹",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+        ],
+        "opens": "09:00",
+        "closes": "22:30"
+      }
+    ],
+    "menu": "https://balaji-enterprises-restaurant.web.app/menu.html"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container navbar-container">
+      <a href="/" class="brand-logo">
+        <div class="brand-icon">B</div>
+        <div class="brand-text-container">
+          <span class="brand-title">Balaji Enterprises</span>
+          <span class="brand-subtitle">& RESTAURANT • AMUL PARLOUR</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="/" class="nav-link active">Home</a></li>
+          <li><a href="/menu.html" class="nav-link">Full Menu</a></li>
+          <li><a href="/orders.html" class="nav-link">Track Order</a></li>
+        </ul>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <div id="nav-auth-container"></div>
+        <a href="/cart.html" class="cart-icon-btn" title="Shopping Cart">
+          <span>🛒</span>
+          <span class="cart-badge" style="display: none;">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <span class="badge badge-amul" style="font-size: 0.85rem; padding: 0.4rem 0.85rem; margin-bottom: 1rem;">
+          Official Amul Parlour Counter
+        </span>
+        <h1 class="hero-title">Delicious Food & Pure Amul Ice Creams</h1>
+        <p class="hero-subtitle">
+          Serving Deoria with fresh North Indian Thalis, Paneer Specials, and 100% Creamy Amul Ice Creams. Order online with quick UPI payment & WhatsApp updates!
+        </p>
+
+        <div class="hero-pills">
+          <div class="hero-pill">📍 Kailashpuri, Gorakhpur Rd, Deoria</div>
+          <div class="hero-pill">⚡ 30-45 Min Home Delivery</div>
+          <div class="hero-pill">📲 UPI QR & WhatsApp Order</div>
+        </div>
+
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="#menu-section" class="btn btn-primary" style="padding: 0.9rem 1.75rem; font-size: 1.05rem;">
+            Order Food Now ➔
+          </a>
+          <a href="/orders.html" class="btn btn-outline" style="padding: 0.9rem 1.5rem; font-size: 1.05rem;">
+            Track Active Order
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Menu Container -->
+  <main class="main-content container" id="menu-section" style="padding-top: 3rem;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem;">
+      <div>
+        <h2 style="font-size: 2rem; color: var(--text-dark);">Our Specialities</h2>
+        <p style="color: var(--text-muted);">Handcrafted recipes cooked with fresh ingredients & authentic Amul Butter</p>
+      </div>
+
+      <div style="position: relative; min-width: 260px;">
+        <input type="text" id="menu-search" class="form-control" placeholder="🔍 Search food or ice cream..." style="padding-left: 2.5rem;" />
+      </div>
+    </div>
+
+    <!-- Category Filter Bar -->
+    <div class="category-bar" id="category-bar"></div>
+
+    <!-- Food Cards Grid -->
+    <div class="menu-grid" id="menu-grid"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3 class="footer-title">Balaji Enterprises & Restaurant</h3>
+        <p class="footer-text">
+          Operating an authentic Amul Parlour counter alongside our restaurant in Deoria. Quality, hygiene, and delightful taste in every bite.
+        </p>
+        <p class="footer-text" style="color: var(--accent-gold); font-weight: 600;">
+          Owner: Rahul Pandey
+        </p>
+      </div>
+
+      <div>
+        <h3 class="footer-title">Location & Contact</h3>
+        <p class="footer-text">
+          📍 Gorakhpur Rd, Kailashpuri,<br />Deoria, Uttar Pradesh - 274001
+        </p>
+        <p class="footer-text">
+          📞 Mobile / WhatsApp: +91 9450867890
+        </p>
+        <p class="footer-text">
+          ✉️ Email: rahul.pandey@balaji.com
+        </p>
+      </div>
+
+      <div>
+        <h3 class="footer-title">Business Hours</h3>
+        <p class="footer-text">
+          Monday - Sunday:<br />
+          <strong>9:00 AM – 10:30 PM</strong>
+        </p>
+        <p class="footer-text" style="margin-top: 1rem;">
+          💳 Accepted Payment: PhonePe, GPay, Paytm UPI QR Code, WhatsApp Confirmation
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom container">
+      &copy; 2026 Balaji Enterprises & Restaurant, Amul Parlour. All rights reserved. Deoria, UP.
+    </div>
+  </footer>
+
+  <!-- Firebase & App SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-functions-compat.js"></script>
+
+  <script src="/js/firebase-config.js"></script>
+  <script src="/js/cart.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/js/menu.js"></script>
+
+</body>
+</html>

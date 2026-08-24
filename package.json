@@ -1,0 +1,19 @@
+{
+  "name": "balaji-enterprises-restaurant",
+  "version": "1.0.0",
+  "description": "Online Food Ordering & Delivery Platform for Balaji Enterprises & Restaurant / Amul Parlour",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx serve public",
+    "start": "npx serve public",
+    "build": "echo 'Building static assets...'",
+    "deploy": "npx firebase-tools deploy --only hosting,firestore,storage,functions",
+    "deploy:hosting": "npx firebase-tools deploy --only hosting",
+    "deploy:functions": "npx firebase-tools deploy --only functions",
+    "deploy:rules": "npx firebase-tools deploy --only firestore:rules,storage"
+  },
+  "devDependencies": {
+    "firebase-tools": "^13.29.1",
+    "serve": "^14.2.4"
+  }
+}

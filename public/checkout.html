@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout & Payment | Balaji Enterprises & Restaurant Deoria</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/components.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container navbar-container">
+      <a href="/" class="brand-logo">
+        <div class="brand-icon">B</div>
+        <div class="brand-text-container">
+          <span class="brand-title">Balaji Enterprises</span>
+          <span class="brand-subtitle">& RESTAURANT • AMUL PARLOUR</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/menu.html" class="nav-link">Full Menu</a></li>
+          <li><a href="/orders.html" class="nav-link">Track Order</a></li>
+        </ul>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <div id="nav-auth-container"></div>
+        <a href="/cart.html" class="cart-icon-btn" title="Shopping Cart">
+          <span>🛒</span>
+          <span class="cart-badge" style="display: none;">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content container" style="padding-top: 2.5rem;" id="checkout-main-section">
+    <h1 style="font-size: 2rem; color: var(--text-dark); margin-bottom: 1.5rem;">Checkout & Delivery Details</h1>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+      <!-- Delivery Form -->
+      <div>
+        <div class="summary-card">
+          <h3 style="font-size: 1.2rem; color: var(--text-dark); margin-bottom: 1.25rem;">
+            1. Enter Delivery Information
+          </h3>
+
+          <form id="checkout-form">
+            <div class="form-group">
+              <label class="form-label" for="customer-name">Full Name *</label>
+              <input type="text" id="customer-name" class="form-control" placeholder="e.g. Rahul Sharma" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="customer-phone">Phone / WhatsApp Number (10 Digits) *</label>
+              <input type="tel" id="customer-phone" class="form-control" placeholder="e.g. 9876543210" pattern="[0-9]{10}" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="customer-address">Complete Delivery Address (Deoria) *</label>
+              <textarea id="customer-address" class="form-control" rows="3" placeholder="House No, Colony / Area, Landmark, Deoria - 274001" required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="order-instructions">Special Cooking or Delivery Notes (Optional)</label>
+              <input type="text" id="order-instructions" class="form-control" placeholder="e.g. Extra spicy, don't ring bell" />
+            </div>
+
+            <div style="background-color: var(--primary-light); padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.5rem;">
+              <h4 style="font-size: 0.95rem; color: var(--primary-dark); margin-bottom: 0.25rem;">💳 Payment Method</h4>
+              <p style="font-size: 0.85rem; color: var(--text-dark);">
+                Static UPI QR Code + Instant WhatsApp Payment Confirmation. Scan & pay via any UPI app (GPay / PhonePe / Paytm).
+              </p>
+            </div>
+
+            <button type="submit" id="place-order-btn" class="btn btn-primary btn-block" style="padding: 0.9rem; font-size: 1.05rem;">
+              ⚡ Place Order & View Payment QR
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Order Summary Column -->
+      <div>
+        <div class="summary-card">
+          <h3 style="font-size: 1.2rem; color: var(--text-dark); margin-bottom: 1rem;">2. Order Items</h3>
+          <div id="checkout-items" style="margin-bottom: 1rem;"></div>
+
+          <div style="border-top: 2px solid var(--border-color); padding-top: 1rem;">
+            <div class="summary-row">
+              <span>Delivery Charge</span>
+              <span id="checkout-delivery-charge">₹30</span>
+            </div>
+            <div class="summary-row total">
+              <span>Total Payable</span>
+              <span id="checkout-total-amount" style="color: var(--primary-dark);">₹0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-bottom" style="border: none;">
+      &copy; 2026 Balaji Enterprises & Restaurant, Amul Parlour. Deoria, UP.
+    </div>
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-functions-compat.js"></script>
+
+  <script src="/js/firebase-config.js"></script>
+  <script src="/js/cart.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/js/checkout.js"></script>
+
+</body>
+</html>
